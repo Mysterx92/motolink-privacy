@@ -63,7 +63,7 @@ In base alla funzione utilizzata MotoLink può richiedere autorizzazioni relativ
 - visualizzazione sopra altre app;
 - wake lock e funzioni di prossimità previste dall'app.
 
-MotoLink non richiede `QUERY_ALL_PACKAGES`: la visibilità delle app è limitata alle attività avviabili previste dal Manifest Android.
+Per permetterti di scegliere le app preferite, MotoLink visualizza solo le applicazioni che puoi avviare dal telefono.
 
 ## Eliminazione dei dati locali
 
