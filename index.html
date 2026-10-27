@@ -176,7 +176,18 @@ svg{display:block;width:22px;height:22px;fill:none;stroke:currentColor;stroke-wi
   var buttons=Array.prototype.slice.call(document.querySelectorAll('#ml-lang-switch button'));
   function useLanguage(lang){
     lang=(lang==='en')?'en':'it';
-    Object.keys(nodes).forEach(function(sel){nodes[sel].innerHTML=(lang==='en')?english[sel]:italian[sel];});
+    Object.keys(nodes).forEach(function(sel){
+      var translated=(lang==='en')?english[sel]:italian[sel];
+      if(lang==='en' && sel.indexOf('.hero-bottom .chip')===0) {
+        var svg=italian[sel].match(/<svg[\s\S]*?<\/svg>/);
+        if(svg)translated=svg[0]+' '+translated;
+      }
+      if(lang==='en' && sel==='.toc-footer a') {
+        var svgLink=italian[sel].match(/<svg[\s\S]*?<\/svg>/);
+        if(svgLink)translated=translated+' '+svgLink[0];
+      }
+      nodes[sel].innerHTML=translated;
+    });
     document.documentElement.lang=lang;
     document.title=(lang==='en')?'Privacy Policy | MotoLink':'Privacy Policy | MotoLink';
     buttons.forEach(function(b){b.setAttribute('aria-pressed',String(b.getAttribute('data-lang')===lang));});
