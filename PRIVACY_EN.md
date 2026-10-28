@@ -44,7 +44,7 @@ Some features use other companies' services, such as **Google** for code scannin
 
 **Donations to MotoLink are optional and you choose the amount.** They are not required to use the app and do not unlock features. If you donate, the external **PayPal** website opens and handles the payment. **MotoLink does not receive your card details or PayPal password.** In some versions, the Credits screen may load the PayPal button image or other elements directly from PayPal's website.
 
-The optional **6 cm physical MotoLink SOSTENITORE sticker** is a **thank-you gift**, not a purchase or a digital benefit. If you wish to request it, you may choose to send an email with your first name, last name, delivery address and optional donation reference. We use this information to reply, check the contribution and, when applicable, arrange delivery. **MotoLink does not automatically send these details.**
+**MotoLink SOSTENITORE sticker:** as a thank-you for supporting the project, MotoLink may offer a complimentary sticker. Requesting it is optional. If you choose to receive it, the information you send by email will only be used to handle your request and any delivery.
 
 You can also read the privacy policies of [Google](https://policies.google.com/privacy), [Supabase](https://supabase.com/privacy), [Groq](https://groq.com/privacy-policy/) and [PayPal](https://www.paypal.com/it/legalhub/paypal/privacy-full).
 
