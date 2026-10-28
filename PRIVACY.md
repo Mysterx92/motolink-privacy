@@ -44,7 +44,7 @@ Alcune funzioni utilizzano servizi di altre aziende, per esempio **Google** per 
 
 Le **donazioni a MotoLink sono libere e volontarie**. Non sono richieste per usare l'app e non sbloccano funzioni. Se scegli di donare, si apre il sito esterno di **PayPal**, che gestisce il pagamento. **MotoLink non riceve i dati della tua carta o la password PayPal.** In alcune versioni, la pagina Crediti può caricare immagini o elementi del pulsante PayPal direttamente dal suo sito.
 
-L'eventuale **adesivo fisico MotoLink SOSTENITORE da 6 cm** è un **omaggio facoltativo**, non un acquisto e non un vantaggio digitale. Se desideri richiederlo, puoi scegliere di inviare una email con nome, cognome, indirizzo per la spedizione ed eventuale riferimento della donazione. Usiamo questi dati per rispondere alla richiesta, verificare il contributo e, se previsto, organizzare la spedizione. **MotoLink non invia questi dati automaticamente.**
+**Adesivo MotoLink SOSTENITORE:** come ringraziamento per il sostegno al progetto, MotoLink può offrire un adesivo in omaggio. La richiesta è facoltativa. Se scegli di riceverlo, i dati che invii tramite email saranno utilizzati soltanto per gestire la richiesta e l'eventuale spedizione.
 
 Per approfondire puoi leggere anche le informative di [Google](https://policies.google.com/privacy), [Supabase](https://supabase.com/privacy), [Groq](https://groq.com/privacy-policy/) e [PayPal](https://www.paypal.com/it/legalhub/paypal/privacy-full).
 
