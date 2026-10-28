@@ -1,61 +1,68 @@
-# Informativa sulla privacy — MotoLink
+# Privacy Policy — MotoLink
 
 **Ultimo aggiornamento: 28 ottobre 2026.**
 
-Questa informativa riguarda l'app Android **MotoLink**, per le funzionalità effettivamente presenti nella versione installata. MotoLink offre mirroring verso display moto compatibili, profili di collegamento e strumenti facoltativi di supporto. Il contatto ufficiale per privacy e assistenza è **[motolinkofficial.app@gmail.com](mailto:motolinkofficial.app@gmail.com)**.
+Qui trovi, con parole semplici, quali informazioni usa MotoLink, quando vengono condivise e come puoi cancellarle. MotoLink permette di mostrare lo schermo del telefono sul display di una moto compatibile e offre alcune funzioni facoltative di assistenza. Per domande sulla privacy puoi scrivere a **[motolinkofficial.app@gmail.com](mailto:motolinkofficial.app@gmail.com)**.
 
-## Dati e impostazioni conservati sul telefono
+## Quali dati restano sul telefono
 
-MotoLink conserva localmente profili moto, dati di collegamento configurati o acquisiti tramite QR, eventuali immagini dei profili scelte dall'utente, app preferite, impostazioni dell'interfaccia, adattamento del display, preferenze e Log tecnico.
+MotoLink salva sul tuo telefono le moto che aggiungi al Garage, i dati necessari a collegarle, le eventuali foto scelte per i profili, le app preferite e le impostazioni che personalizzi.
 
-Il Log può contenere dati tecnici relativi a dispositivo, moto, rete, connessione o errori. Resta sul telefono finché non viene eliminato tramite **Supporto → Log → Pulisci → Pulisci Log**, cancellazione dei dati dell'app o disinstallazione. Se si utilizza l'Assistente, i token della sessione anonima sono conservati nell'archivio privato dell'app. Salvare un profilo moto non comporta di per sé l'invio dei suoi dati al backend dell'Assistente.
+Salva anche un **registro tecnico**, chiamato **Log** nell'app, che aiuta a capire eventuali problemi. Può contenere informazioni sul telefono, sulla moto, sulla connessione e sugli errori. Il Log resta sul telefono finché non scegli di cancellarlo. Aggiungere una moto al Garage non significa inviarne automaticamente i dati al nostro servizio di assistenza.
 
-## Log e diagnostica su richiesta
+Se usi l'Assistente, il telefono conserva anche le informazioni necessarie per riconoscere la tua sessione quando torni a utilizzarlo.
 
-Una normale conversazione con l'Assistente **non invia automaticamente il Log**.
+## Quando vengono condivise informazioni
 
-- **Condivisione esterna:** l'utente sceglie di aprire il pannello di condivisione Android e seleziona un destinatario.
-- **Condivisione con l'Assistente:** soltanto scegliendo **Supporto → Log → Condividi → Assistente**, viene preparato e allegato un estratto filtrato del Log, limitato a 6.000 caratteri.
+**MotoLink non invia automaticamente il Log quando fai una domanda all'Assistente.** Decidi tu se condividerlo.
 
-MotoLink applica un filtro locale e un secondo filtro lato server. Questi riducono la presenza di informazioni tecniche sensibili ma non garantiscono la rimozione di tutto ciò che l'utente abbia inserito volontariamente. **Non inviare password, token, codici completi o altri dati riservati.**
+- Con **Condividi**, puoi scegliere un'altra app o una persona a cui inviare il Log, tramite il normale menu Android.
+- Se scegli di **inviare il Log all'Assistente**, MotoLink prepara un estratto, rimuovendo alcune informazioni delicate, e lo allega alla tua richiesta. Vengono inviati al massimo 6.000 caratteri.
 
-## Assistente MotoLink e sessioni anonime
+Viene effettuato un ulteriore controllo anche sul servizio di assistenza. Queste protezioni aiutano a limitare la condivisione di dati personali, ma non possono eliminare con certezza qualsiasi informazione che tu abbia scritto. **Non inserire password, codici riservati o altri dati sensibili nelle richieste o nei Log che condividi.**
 
-L'Assistente è facoltativo e richiede una connessione Internet. Quando viene usato, MotoLink crea una **sessione tecnica anonima** tramite **Supabase Auth**, senza richiedere un profilo nominativo. Il sistema conserva le informazioni di autenticazione necessarie alla sessione.
+## Come funziona l'Assistente MotoLink
 
-- Alla pressione di **Invia**, la richiesta HTTPS può contenere testo della domanda (massimo 1.200 caratteri), versione dell'app e, solo su scelta dell'utente, diagnostica filtrata.
-- Il backend può rispondere dalla knowledge base MotoLink oppure richiedere una risposta al provider IA **Groq**.
-- Il database applicativo MotoLink non conserva cronologia chat, domande, risposte o contenuto dei Log inviati all'Assistente. Mantiene un contatore aggregato giornaliero delle chiamate al provider IA.
+L'Assistente è **facoltativo** e richiede Internet. Per permetterti di usarlo, viene creata una **sessione anonima**: non devi registrarti con nome e cognome.
 
-Questa precisazione **non** esclude i record di autenticazione gestiti da Supabase o eventuali metadati e log infrastrutturali conservati dai fornitori secondo le loro rispettive condizioni.
+Quando premi **Invia**, vengono trasmessi la tua domanda (massimo 1.200 caratteri), la versione dell'app e soltanto gli eventuali dati tecnici che hai scelto di allegare.
 
-## Mirroring, connessione moto, QR e navigazione
+Per gestire queste richieste utilizziamo **Supabase**, un servizio esterno che gestisce le sessioni e le comunicazioni con l'Assistente. Quando serve una risposta generata dall'intelligenza artificiale, la domanda può essere inviata a **Groq**, il servizio che fornisce questa funzione.
 
-- **Mirroring:** Android richiede il consenso **MediaProjection** prima di acquisire lo schermo. I contenuti visualizzati possono comprendere dati personali o notifiche; il flusso viene trasmesso al TFT compatibile tramite connessione locale e **non** viene inviato al backend dell'Assistente.
-- **Connessione:** MotoLink usa Wi-Fi, Wi-Fi Direct/P2P e, dove previsto, Bluetooth/BLE per collegarsi al dispositivo moto; alcuni dettagli tecnici possono comparire nel Log locale.
-- **QR e fotocamera:** l'associazione può utilizzare Google Code Scanner oppure, come alternativa, lo scanner interno con CameraX. I servizi Google possono trattare metadati tecnici secondo le proprie informative.
-- **Google Maps:** solo dopo l'abilitazione dell'accesso alle notifiche, MotoLink interpreta le notifiche di navigazione compatibili di Google Maps per inviare indicazioni al TFT via BLE. L'autorizzazione può essere revocata in Android.
+**MotoLink non salva la cronologia delle domande, delle risposte o dei Log condivisi nel proprio archivio delle conversazioni.** Conserva soltanto un conteggio giornaliero delle richieste inviate all'intelligenza artificiale. Supabase e gli altri fornitori possono comunque conservare le informazioni necessarie al funzionamento del servizio e dati tecnici secondo le loro informative.
 
-## Fornitori esterni, PayPal e adesivo SOSTENITORE
+## Schermo della moto, QR e navigazione
 
-Per i servizi richiesti dall'utente possono intervenire **Supabase** (autenticazione/backend), **Groq** (IA quando necessaria), **Google/Android** (QR, sistema e navigazione), **PayPal** (pagina esterna per donazioni) e l'app email scelta dall'utente. Questi fornitori possono trattare indirizzi IP e altri metadati tecnici secondo le loro condizioni.
+- **Schermo della moto:** quando premi START e autorizzi Android, MotoLink può mostrare sul display compatibile ciò che appare sul telefono. Possono quindi essere visibili anche notifiche o informazioni personali presenti sullo schermo. Le immagini vengono inviate direttamente al dispositivo collegato, tramite la connessione locale: **non vengono inviate all'Assistente online**. Puoi interrompere la condivisione dello schermo.
+- **Collegamento alla moto:** per collegare telefono e display, MotoLink utilizza Wi-Fi e, sulle moto compatibili, Bluetooth. Alcune informazioni sulla connessione possono essere riportate nel Log sul telefono.
+- **Codice QR:** per aggiungere una moto puoi scansionare un codice QR. MotoLink usa il lettore di Google o, quando necessario, la fotocamera del telefono.
+- **Indicazioni di Google Maps:** se attivi volontariamente l'accesso alle notifiche, Android permette a MotoLink di leggere le notifiche del telefono. MotoLink utilizza quelle di navigazione compatibili di Google Maps per mostrare le indicazioni sul display della moto. Puoi disattivare l'accesso dalle impostazioni Android.
 
-Le donazioni PayPal sono **libere, volontarie** e non sbloccano contenuti o funzionalità digitali. Il pagamento avviene **fuori da MotoLink** sul sito PayPal: l'app non raccoglie direttamente numeri di carta o credenziali di pagamento. Alcune versioni caricano nella pagina Crediti immagini o risorse web PayPal, generando richieste tecniche verso PayPal.
+## Donazioni, adesivo e servizi esterni
 
-L'eventuale **adesivo fisico MotoLink SOSTENITORE da 6 cm** è un **omaggio facoltativo di ringraziamento, non un acquisto nell'app**. Non è necessario richiederlo per utilizzare MotoLink. Se l'utente sceglie di richiederlo, si apre la propria app email: l'utente decide se comunicare nome, cognome, indirizzo di spedizione e riferimento PayPal facoltativo. Queste informazioni, se inviate, servono per rispondere, verificare manualmente la donazione e, se applicabile, gestire la spedizione. MotoLink non le invia automaticamente attraverso l'app.
+Alcune funzioni utilizzano servizi di altre aziende, per esempio **Google** per la scansione dei codici, **Supabase** e **Groq** per l'Assistente e **PayPal** per le donazioni. Quando li utilizzi, questi servizi possono ricevere informazioni tecniche come l'indirizzo Internet della connessione, secondo le proprie regole sulla privacy.
 
-Informative dei fornitori: [Supabase](https://supabase.com/privacy), [Groq](https://groq.com/privacy-policy/), [Google](https://policies.google.com/privacy), [PayPal](https://www.paypal.com/it/legalhub/paypal/privacy-full).
+Le **donazioni a MotoLink sono libere e volontarie**. Non sono richieste per usare l'app e non sbloccano funzioni. Se scegli di donare, si apre il sito esterno di **PayPal**, che gestisce il pagamento. **MotoLink non riceve i dati della tua carta o la password PayPal.** In alcune versioni, la pagina Crediti può caricare immagini o elementi del pulsante PayPal direttamente dal suo sito.
 
-## Permessi Android
+L'eventuale **adesivo fisico MotoLink SOSTENITORE da 6 cm** è un **omaggio facoltativo**, non un acquisto e non un vantaggio digitale. Se desideri richiederlo, puoi scegliere di inviare una email con nome, cognome, indirizzo per la spedizione ed eventuale riferimento della donazione. Usiamo questi dati per rispondere alla richiesta, verificare il contributo e, se previsto, organizzare la spedizione. **MotoLink non invia questi dati automaticamente.**
 
-Secondo le funzioni utilizzate, MotoLink può richiedere Internet/stato rete, Wi-Fi e dispositivi Wi-Fi vicini, Bluetooth/BLE, fotocamera per lo scanner QR di riserva, posizione legacy su Android meno recenti, **MediaProjection**, servizio in primo piano, visualizzazione sopra altre app e wake lock/prossimità. L'accesso alle notifiche per Google Maps richiede un'attivazione separata.
+Per approfondire puoi leggere anche le informative di [Google](https://policies.google.com/privacy), [Supabase](https://supabase.com/privacy), [Groq](https://groq.com/privacy-policy/) e [PayPal](https://www.paypal.com/it/legalhub/paypal/privacy-full).
 
-MotoLink non richiede `QUERY_ALL_PACKAGES`: per le app preferite visualizza soltanto applicazioni avviabili. Le autorizzazioni possono essere controllate o revocate dalle impostazioni Android, con possibile limitazione delle relative funzioni.
+## Autorizzazioni richieste dal telefono
 
-## Conservazione, cancellazione e contatti privacy
+MotoLink può chiederti il permesso di utilizzare **Wi-Fi e Bluetooth**, **fotocamera** per leggere un codice QR, **condivisione dello schermo**, **notifiche di navigazione** e, per alcune funzioni, di mostrare un piccolo pannello sopra altre app.
 
-- **Dati locali:** per eliminare il Log usa **Supporto → Log → Pulisci → Pulisci Log**. Per rimuovere anche profili moto, foto, impostazioni e altri dati locali, usa **Impostazioni Android → App → MotoLink → Spazio di archiviazione → Cancella dati** oppure disinstalla l'app.
-- **Sessione anonima dell'Assistente:** nelle versioni dotate del comando, vai in **Supporto → Log → Pulisci → Elimina sessione**, poi conferma. La funzione server **già collaudata** verifica l'identità anonima richiesta e ne elimina il record Supabase; dopo conferma il client cancella i token locali. Questa operazione **non** cancella profili moto, impostazioni o Log sul telefono. Un successivo utilizzo dell'Assistente può creare una nuova sessione anonima.
-- **Richieste dall'esterno:** consulta la pagina pubblica **[Cancellazione dei dati MotoLink](https://mysterx92.github.io/motolink-privacy/delete-data.html)** o scrivi a **[motolinkofficial.app@gmail.com](mailto:motolinkofficial.app@gmail.com)**. Senza una sessione ancora identificabile, ad esempio dopo disinstallazione, potrebbe non essere tecnicamente possibile associare una richiesta email a un'identità anonima. Non inviare mai token o password per chiedere la cancellazione.
+Su alcune versioni meno recenti di Android può essere richiesta anche l'autorizzazione alla **posizione** per trovare e collegare dispositivi Wi-Fi vicini. L'app utilizza inoltre le funzioni di Android necessarie a mantenere attiva la connessione durante il mirroring.
 
-I dati locali restano fino alla pulizia o alla cancellazione dell'app; la sessione Supabase resta finché non viene eliminata. I tempi di conservazione dei log infrastrutturali dei fornitori e delle eventuali email di supporto o spedizione dipendono dai rispettivi sistemi e dalle esigenze di gestione delle richieste. Per informazioni, esercizio dei diritti sulla privacy o richieste di cancellazione contatta MotoLink all'indirizzo sopra indicato. La cancellazione dell'identità Supabase non elimina automaticamente email già inviate o dati presso servizi indipendenti.
+Per scegliere le app preferite, MotoLink mostra le applicazioni che puoi aprire sul telefono. **Non cerca di accedere indistintamente a tutte le app installate.**
+
+Puoi controllare o revocare le autorizzazioni dalle **Impostazioni Android**. Se ne disattivi alcune, le relative funzioni di MotoLink potrebbero non funzionare.
+
+## Come cancellare i tuoi dati e contattarci
+
+- **Per cancellare il Log:** apri **Supporto → Log → Pulisci**, quindi scegli **Pulisci Log**.
+- **Per cancellare la sessione dell'Assistente:** apri **Supporto → Log → Pulisci**, scegli **Elimina sessione** e conferma. Il servizio elimina la sessione anonima associata al tuo telefono e l'app rimuove le informazioni necessarie per riutilizzarla, solo dopo la conferma dell'avvenuta cancellazione. **I profili moto, le impostazioni e il Log non vengono eliminati.** Se userai di nuovo l'Assistente, verrà creata una nuova sessione.
+- **Per cancellare anche profili e preferenze:** vai nelle **Impostazioni Android → App → MotoLink → Spazio di archiviazione → Cancella dati**, oppure disinstalla MotoLink. Questa operazione non sostituisce la cancellazione della sessione dell'Assistente.
+- **Se non puoi più usare l'app:** consulta la pagina [Come richiedere la cancellazione dei dati](https://mysterx92.github.io/motolink-privacy/delete-data.html) oppure scrivi a **[motolinkofficial.app@gmail.com](mailto:motolinkofficial.app@gmail.com)**. Poiché la sessione dell'Assistente è anonima, se è stata persa o l'app è stata disinstallata potrebbe non essere possibile risalire alla sessione usando soltanto il tuo indirizzo email.
+
+I dati sul telefono restano finché non li cancelli. La sessione dell'Assistente resta finché non viene eliminata. Gli eventuali dati tecnici conservati dai servizi esterni e le email di assistenza o spedizione seguono i tempi di conservazione dei rispettivi servizi e le necessità di gestione delle richieste. Per domande o richieste sui tuoi dati, **contattaci all'indirizzo sopra indicato**. Eliminare la sessione non cancella automaticamente le email già inviate o i dati gestiti separatamente da altre aziende.
