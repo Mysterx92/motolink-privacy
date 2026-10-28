@@ -2,60 +2,67 @@
 
 **Last updated: 28 October 2026.**
 
-This notice applies to the **MotoLink** Android app and to the features available in the installed version. MotoLink provides mirroring to compatible motorcycle displays, connection profiles and optional support features. The official privacy and support contact is **[motolinkofficial.app@gmail.com](mailto:motolinkofficial.app@gmail.com)**.
+Here is a simple explanation of what information MotoLink uses, when it is shared, and how you can delete it. MotoLink lets you display your phone's screen on a compatible motorcycle display and offers optional help features. For privacy questions, contact **[motolinkofficial.app@gmail.com](mailto:motolinkofficial.app@gmail.com)**.
 
-## Data and settings stored on the device
+## What stays on your phone
 
-MotoLink stores motorcycle profiles, connection details configured or captured using QR codes, optional user-selected profile photos, favorite apps, interface and display-adjustment settings, preferences and technical logs locally.
+MotoLink saves the motorcycles you add in Garage, the details needed to connect them, any profile pictures you choose, your favorite apps, and your personal settings on your phone.
 
-The log may contain technical information about devices, motorcycles, networks, connections or errors. It remains on the phone until removed using **Support → Log → Clear → Clear Log**, by clearing the app's data or by uninstalling it. When the Assistant is used, anonymous session tokens are kept in the app's private storage. Saving a motorcycle profile does not by itself upload its details to the Assistant backend.
+It also keeps a **technical record**, called **Log** in the app, to help find and fix problems. This may include information about your phone, motorcycle, connection and errors. The Log stays on your phone until you choose to delete it. Adding a motorcycle to Garage does not automatically send its details to our help service.
 
-## Logs and diagnostics only on request
+If you use the Assistant, your phone also stores the information needed to recognize your session when you use it again.
 
-A normal Assistant conversation **does not automatically upload the log**.
+## When information is shared
 
-- **External sharing:** the user chooses to open the Android share sheet and selects a recipient.
-- **Sharing with the Assistant:** only when the user selects **Support → Log → Share → Assistant** is a filtered log extract (maximum 6,000 characters) prepared and voluntarily attached.
+**MotoLink does not automatically send the Log when you ask the Assistant a question.** You decide whether to share it.
 
-MotoLink applies local filtering and an additional server-side filter. These reduce the exposure of sensitive technical information but cannot guarantee removal of everything the user may have entered. **Do not send passwords, tokens, full codes or other confidential information.**
+- With **Share**, you can choose another app or person to receive the Log through Android's normal sharing menu.
+- If you choose to **send the Log to the Assistant**, MotoLink prepares an extract, removes some sensitive details, and attaches it to your request. It sends no more than 6,000 characters.
 
-## MotoLink Assistant and anonymous sessions
+An additional check is also performed by the help service. These safeguards help limit the sharing of personal information, but they cannot reliably remove everything you may have written yourself. **Do not include passwords, private codes or other sensitive information in requests or Logs you share.**
 
-The Assistant is optional and requires Internet access. When used, MotoLink creates an **anonymous technical session** through **Supabase Auth** without asking for a named user profile. The service stores the authentication information needed for the session.
+## How the MotoLink Assistant works
 
-- When **Send** is pressed, the HTTPS request may contain the question (up to 1,200 characters), the app version and, only if chosen by the user, filtered diagnostics.
-- The backend can answer using the MotoLink knowledge base or request an answer from AI provider **Groq**.
-- The MotoLink application database does not store chat history, questions, responses or the contents of logs sent to the Assistant. It keeps an aggregated daily count of AI-provider calls.
+The Assistant is **optional** and requires an internet connection. To use it, an **anonymous session** is created: you do not need to register with your name.
 
-This statement does **not** exclude Supabase authentication records or technical metadata and infrastructure logs that service providers may handle under their respective terms.
+When you press **Send**, MotoLink sends your question (up to 1,200 characters), the app version, and only any technical details you have chosen to attach.
 
-## Mirroring, motorcycle connections, QR and navigation
+We use **Supabase**, an external service that manages Assistant sessions and requests. When an answer needs to be generated by artificial intelligence, your question may be sent to **Groq**, the provider of that feature.
 
-- **Mirroring:** Android requests **MediaProjection** permission before screen capture. Visible content may include personal information or notifications. The stream is sent to the compatible motorcycle display over the local connection and is **not** uploaded to the Assistant backend.
-- **Connection:** MotoLink uses Wi-Fi, Wi-Fi Direct/P2P and, where applicable, Bluetooth/BLE to connect to the motorcycle display; technical details may appear in local logs.
-- **QR and camera:** pairing may use Google Code Scanner or the CameraX-based internal scanner as a fallback. Google services may process technical metadata under their policies.
-- **Google Maps:** only after notification access is enabled, MotoLink interprets compatible Google Maps navigation notifications and sends directions to the display over BLE. This permission can be revoked in Android.
+**MotoLink does not keep a history of your questions, answers or shared Logs in its own conversation database.** It only keeps a daily count of requests sent to the AI service. Supabase and other providers may still keep information needed to operate their services and technical data under their own privacy policies.
 
-## External providers, PayPal and SOSTENITORE sticker
+## Motorcycle screen, QR codes and navigation
 
-User-selected features may involve **Supabase** (authentication/backend), **Groq** (AI when needed), **Google/Android** (QR, system and navigation), **PayPal** (external donations) and the email app chosen by the user. Providers may handle IP addresses and other technical metadata under their terms.
+- **Motorcycle screen:** when you press START and give Android permission, MotoLink can show what is on your phone on a compatible display. This means notifications and personal information visible on your phone may also be displayed. The images travel directly to the connected device over the local connection: **they are not sent to the online Assistant**. You can stop sharing your screen.
+- **Motorcycle connection:** MotoLink uses Wi-Fi and, on compatible motorcycles, Bluetooth to connect your phone to the display. Some connection details may appear in the Log stored on your phone.
+- **QR code:** you can add a motorcycle by scanning a QR code. MotoLink uses Google's code scanner or your phone's camera when needed.
+- **Google Maps directions:** if you choose to enable notification access, Android allows MotoLink to read phone notifications. MotoLink uses compatible Google Maps navigation notifications to show directions on the motorcycle display. You can turn off access in Android settings.
 
-PayPal donations are **voluntary**, with amounts chosen by the user, and do not unlock digital content or app features. Payment happens **outside MotoLink** on PayPal's website: the app does not directly collect card numbers or payment credentials. Some versions may load PayPal images or web resources on the Credits screen, causing technical requests to PayPal.
+## Donations, sticker and outside services
 
-The optional **6 cm physical MotoLink SOSTENITORE sticker** is a **thank-you gift, not an in-app purchase**. Requesting it is not required to use MotoLink. If the user wishes to ask for it, their chosen email app opens: the user decides whether to send their first name, last name, delivery address and optional PayPal reference. If sent, this information is used to respond, manually check the donation and, when applicable, arrange delivery. MotoLink does not automatically transmit these details from the app.
+Some features use other companies' services, such as **Google** for code scanning, **Supabase** and **Groq** for the Assistant, and **PayPal** for donations. When you use these services, they may receive technical connection details such as your internet address under their own privacy policies.
 
-Provider policies: [Supabase](https://supabase.com/privacy), [Groq](https://groq.com/privacy-policy/), [Google](https://policies.google.com/privacy), [PayPal](https://www.paypal.com/it/legalhub/paypal/privacy-full).
+**Donations to MotoLink are optional and you choose the amount.** They are not required to use the app and do not unlock features. If you donate, the external **PayPal** website opens and handles the payment. **MotoLink does not receive your card details or PayPal password.** In some versions, the Credits screen may load the PayPal button image or other elements directly from PayPal's website.
 
-## Android permissions
+The optional **6 cm physical MotoLink SOSTENITORE sticker** is a **thank-you gift**, not a purchase or a digital benefit. If you wish to request it, you may choose to send an email with your first name, last name, delivery address and optional donation reference. We use this information to reply, check the contribution and, when applicable, arrange delivery. **MotoLink does not automatically send these details.**
 
-Depending on the features used, MotoLink may request Internet/network status, Wi-Fi and nearby Wi-Fi devices, Bluetooth/BLE, camera for fallback QR scanning, legacy location on older Android versions, **MediaProjection**, foreground service, display over other apps and wake-lock/proximity capabilities. Google Maps notification access requires separate activation.
+You can also read the privacy policies of [Google](https://policies.google.com/privacy), [Supabase](https://supabase.com/privacy), [Groq](https://groq.com/privacy-policy/) and [PayPal](https://www.paypal.com/it/legalhub/paypal/privacy-full).
 
-MotoLink does not request `QUERY_ALL_PACKAGES`: only launchable apps are displayed for favorites. Permissions can be reviewed or revoked in Android settings, which may limit the related features.
+## Permissions requested by your phone
 
-## Retention, deletion and privacy contact
+MotoLink may ask for permission to use **Wi-Fi and Bluetooth**, the **camera** to read a QR code, **screen sharing**, **navigation notifications**, and, for some features, a small panel displayed over other apps.
 
-- **Local data:** to clear the log use **Support → Log → Clear → Clear Log**. To remove motorcycle profiles, photos, settings and other local data, use **Android Settings → Apps → MotoLink → Storage → Clear data**, or uninstall the app.
-- **Anonymous Assistant session:** in versions offering this option, select **Support → Log → Clear → Delete session** and confirm. The **tested** server function verifies the requested anonymous identity and deletes its Supabase record; on server confirmation the client clears its local tokens. This **does not** delete motorcycle profiles, settings or logs on the phone. Using the Assistant again may create a new anonymous session.
-- **Outside the app:** visit **[MotoLink data deletion](https://mysterx92.github.io/motolink-privacy/delete-data.html)** or email **[motolinkofficial.app@gmail.com](mailto:motolinkofficial.app@gmail.com)**. Without an identifiable session, for example after uninstalling, it may not be technically possible to connect an emailed request with an anonymous identity. Never email tokens or passwords to request deletion.
+On some older Android versions, **location** permission may also be needed to find and connect to nearby Wi-Fi devices. MotoLink also uses Android features needed to keep the connection running while mirroring.
 
-Local data remains until the user clears it or deletes the app; the Supabase session remains until deletion. Retention of provider infrastructure logs and optional support/delivery correspondence depends on the respective systems and the handling of requests. Contact MotoLink at the address above for information, privacy rights requests or deletion enquiries. Deleting a Supabase identity does not automatically erase previously sent emails or independent provider records.
+To let you choose favorite apps, MotoLink shows apps that can be opened on your phone. **It does not try to access every installed app without restriction.**
+
+You can review or turn off permissions in **Android Settings**. Some MotoLink features may stop working if you turn off the permissions they need.
+
+## How to delete your data and contact us
+
+- **To clear the Log:** open **Support → Log → Clear** and select **Clear Log**.
+- **To delete your Assistant session:** open **Support → Log → Clear**, select **Delete session** and confirm. The service deletes the anonymous session linked to your phone and the app removes the information needed to reuse it, only after the deletion has been confirmed. **Motorcycle profiles, settings and Logs are not deleted.** Using the Assistant again creates a new session.
+- **To delete profiles and settings too:** open **Android Settings → Apps → MotoLink → Storage → Clear data**, or uninstall MotoLink. This does not replace deleting your Assistant session.
+- **If you can no longer use the app:** visit [How to request data deletion](https://mysterx92.github.io/motolink-privacy/delete-data.html) or contact **[motolinkofficial.app@gmail.com](mailto:motolinkofficial.app@gmail.com)**. Because Assistant sessions are anonymous, if the session has been lost or the app uninstalled, we may be unable to find it using only your email address.
+
+Data on your phone stays there until you delete it. The Assistant session remains until it is deleted. Any technical data kept by outside services and any help or delivery emails are retained under those services' rules and for the time needed to handle the relevant requests. For questions or requests about your information, **contact us at the address above**. Deleting the Assistant session does not automatically delete emails already sent or information managed separately by other companies.
